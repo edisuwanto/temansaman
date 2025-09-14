@@ -1,0 +1,27 @@
+{
+  "jabatan": "Pimpinan Pesantren",
+  "nama": "Nama Pimpinan",
+  "anak": [
+    {
+      "jabatan": "Sekretaris",
+      "nama": "Nama Sekretaris",
+      "anak": []
+    },
+    {
+      "jabatan": "Bendahara",
+      "nama": "Nama Bendahara",
+      "anak": []
+    },
+    {
+      "jabatan": "Kepala Akademik",
+      "nama": "Nama KA",
+      "anak": [
+        {
+          "jabatan": "Koordinator Halaqoh",
+          "nama": "Nama Koordinator",
+          "anak": []
+        }
+      ]
+    }
+  ]
+}

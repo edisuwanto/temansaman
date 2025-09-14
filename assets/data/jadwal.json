@@ -1,0 +1,68 @@
+[
+  {
+    "hari": "Senin",
+    "mulai": "08:00",
+    "selesai": "09:00",
+    "kelas": "Tilawah A",
+    "halaqoh": "H1",
+    "mata_pelajaran": "Tilawah",
+    "asatidz": "Ust. Ali",
+    "ruang": "R1",
+    "visibility": "public"
+  },
+  {
+    "hari": "Senin",
+    "mulai": "09:15",
+    "selesai": "10:15",
+    "kelas": "Tahfizh B",
+    "halaqoh": "H2",
+    "mata_pelajaran": "Tahfizh",
+    "asatidz": "Ust. Budi",
+    "ruang": "R2",
+    "visibility": "portal"
+  },
+  {
+    "hari": "Selasa",
+    "mulai": "08:00",
+    "selesai": "09:00",
+    "kelas": "Fiqih Dasar",
+    "halaqoh": "H3",
+    "mata_pelajaran": "Fiqih",
+    "asatidz": "Ust. Caca",
+    "ruang": "R1",
+    "visibility": "public"
+  },
+  {
+    "hari": "Rabu",
+    "mulai": "10:30",
+    "selesai": "11:30",
+    "kelas": "Akhlak",
+    "halaqoh": "H2",
+    "mata_pelajaran": "Akhlak",
+    "asatidz": "Ust. Dini",
+    "ruang": "R3",
+    "visibility": "public"
+  },
+  {
+    "hari": "Kamis",
+    "mulai": "13:00",
+    "selesai": "14:00",
+    "kelas": "Bahasa Arab",
+    "halaqoh": "H1",
+    "mata_pelajaran": "B. Arab",
+    "asatidz": "Ust. Eko",
+    "ruang": "R2",
+    "visibility": "public"
+  },
+  {
+    "hari": "Jumat",
+    "mulai": "08:00",
+    "selesai": "09:00",
+    "kelas": "Tafsir",
+    "halaqoh": "H1",
+    "mata_pelajaran": "Tafsir",
+    "asatidz": "Ust. Fajar",
+    "ruang": "R1",
+    "visibility": "public"
+  }
+]

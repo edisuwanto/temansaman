@@ -1,0 +1,82 @@
+[
+  {
+    "nis": "S-2018-001",
+    "nama": "Fajar",
+    "angkatan": 2018,
+    "tahun_masuk": 2018,
+    "status": "Lulus",
+    "wali_nama": "A",
+    "wali_kontak": "08xx",
+    "visibility": "public"
+  },
+  {
+    "nis": "S-2019-002",
+    "nama": "Gita",
+    "angkatan": 2019,
+    "tahun_masuk": 2019,
+    "status": "Lulus",
+    "wali_nama": "B",
+    "wali_kontak": "08xx",
+    "visibility": "public"
+  },
+  {
+    "nis": "S-2020-003",
+    "nama": "Hasan",
+    "angkatan": 2020,
+    "tahun_masuk": 2020,
+    "status": "Aktif",
+    "wali_nama": "C",
+    "wali_kontak": "08xx",
+    "visibility": "portal"
+  },
+  {
+    "nis": "S-2021-004",
+    "nama": "Indah",
+    "angkatan": 2021,
+    "tahun_masuk": 2021,
+    "status": "Aktif",
+    "wali_nama": "D",
+    "wali_kontak": "08xx",
+    "visibility": "public"
+  },
+  {
+    "nis": "S-2022-005",
+    "nama": "Joko",
+    "angkatan": 2022,
+    "tahun_masuk": 2022,
+    "status": "Aktif",
+    "wali_nama": "E",
+    "wali_kontak": "08xx",
+    "visibility": "public"
+  },
+  {
+    "nis": "S-2023-006",
+    "nama": "Kirana",
+    "angkatan": 2023,
+    "tahun_masuk": 2023,
+    "status": "Aktif",
+    "wali_nama": "F",
+    "wali_kontak": "08xx",
+    "visibility": "public"
+  },
+  {
+    "nis": "S-2024-007",
+    "nama": "Lukman",
+    "angkatan": 2024,
+    "tahun_masuk": 2024,
+    "status": "Aktif",
+    "wali_nama": "G",
+    "wali_kontak": "08xx",
+    "visibility": "public"
+  },
+  {
+    "nis": "S-2025-008",
+    "nama": "Mira",
+    "angkatan": 2025,
+    "tahun_masuk": 2025,
+    "status": "Aktif",
+    "wali_nama": "H",
+    "wali_kontak": "08xx",
+    "visibility": "portal"
+  }
+]

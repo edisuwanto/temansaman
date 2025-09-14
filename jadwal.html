@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="id" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jadwal Pelajaran - Sam'an</title>
+  <meta name="description" content="Jadwal Pelajaran - Sam'an - Pesantren Tunanetra Sam'an">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip-link" href="#maincontent">Lewati ke konten utama</a>
+<nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Navigasi utama">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+      <img src="assets/img/logo.svg" alt="" width="28" height="28"> Sam'an
+      <span id="portalBadge" class="badge badge-portal ms-2" style="display:none;">Portal</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Tombol navigasi">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" data-nav="index.html" href="index.html">Beranda</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="tentangDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tentang</a>
+          <ul class="dropdown-menu" aria-labelledby="tentangDropdown">
+            <li><a class="dropdown-item" data-nav="visi-misi.html" href="visi-misi.html">Visi &amp; Misi</a></li>
+            <li><a class="dropdown-item" data-nav="sejarah.html" href="sejarah.html">Sejarah</a></li>
+            <li><a class="dropdown-item" data-nav="struktur.html" href="struktur.html">Struktur Organisasi</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="akademikDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Akademik</a>
+          <ul class="dropdown-menu" aria-labelledby="akademikDropdown">
+            <li><a class="dropdown-item" data-nav="jadwal.html" href="jadwal.html">Jadwal Pelajaran</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dataDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
+          <ul class="dropdown-menu" aria-labelledby="dataDropdown">
+            <li><a class="dropdown-item" data-nav="karyawan.html" href="karyawan.html">Data Karyawan</a></li>
+            <li><a class="dropdown-item" data-nav="santri.html" href="santri.html">Data Santri</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" data-nav="donasi.html" href="donasi.html">Donasi</a></li>
+        <li class="nav-item"><a class="nav-link" data-form="buku_tamu" href="#" target="_blank" rel="noopener">Buku Tamu</a></li>
+        <li class="nav-item"><a class="nav-link" data-form="penelitian" href="#" target="_blank" rel="noopener">Izin Penelitian</a></li>
+        <li class="nav-item"><a id="portalNav" class="nav-link d-none" data-nav="portal.html" href="portal.html">Portal</a></li>
+        <li class="nav-item"><a id="adminNav" class="nav-link d-none" data-nav="admin.html" href="admin.html">Admin</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <div class="form-check form-switch m-0" title="Mode gelap">
+          <input class="form-check-input" type="checkbox" role="switch" id="themeToggle" aria-label="Toggle mode gelap">
+        </div>
+        <div class="form-check form-switch m-0" title="Mode kontras tinggi">
+          <input class="form-check-input" type="checkbox" role="switch" id="contrastToggle" aria-label="Toggle kontras tinggi">
+        </div>
+        <div class="btn-group" role="group" aria-label="Kontrol ukuran font">
+          <button id="fontDec" class="btn btn-outline-secondary btn-sm" type="button">A-</button>
+          <button id="fontReset" class="btn btn-outline-secondary btn-sm" type="button">A</button>
+          <button id="fontInc" class="btn btn-outline-secondary btn-sm" type="button">A+</button>
+        </div>
+        <a class="btn btn-primary btn-sm" data-form="absensi" href="#" target="_blank" rel="noopener">Isi Absensi</a>
+        <button id="portalToggle" class="btn btn-outline-primary btn-sm" type="button">Masuk Portal</button>
+      </div>
+    </div>
+  </div>
+</nav>
+<main id="maincontent" class="py-4">
+  <div class="container">
+<h1 class="h2">Jadwal Pelajaran</h1>
+<p class="text-muted mb-3">Jadwal mingguan. Anda dapat mengunduh file <code>.ics</code> untuk menambahkan ke kalender.</p>
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+  <input id="searchJadwal" class="form-control form-control-sm" placeholder="Cari hari/kelas/asatidz/ruang..." aria-label="Cari jadwal">
+  <button id="btnDownloadICS" class="btn btn-sm btn-outline-primary">Unduh .ics (pekan ini)</button>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover" id="jadwalTable">
+    <caption>Jadwal pelajaran terstruktur per sesi</caption>
+    <thead>
+      <tr><th>Hari</th><th>Mulai</th><th>Selesai</th><th>Kelas</th><th>Halaqoh</th><th>Mata Pelajaran</th><th>Asatidz</th><th>Ruang</th><th>Visibilitas</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<script>
+  SAMAN.setupTableFilter('#searchJadwal','#jadwalTable');
+  (async () => {
+    try {
+      const data = await SAMAN.loadJSON('assets/data/jadwal.json');
+      const tbody = document.querySelector('#jadwalTable tbody'); tbody.innerHTML='';
+      data.filter(SAMAN.isVisibleForRow).forEach(j => {
+        const vis = (j.visibility||'public');
+        const badge = vis==='portal' ? '<span class="badge text-bg-warning">Portal</span>' : '<span class="badge text-bg-success">Publik</span>';
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${j.hari}</td><td>${j.mulai}</td><td>${j.selesai}</td>
+                        <td>${j.kelas}</td><td>${j.halaqoh||'-'}</td>
+                        <td>${j.mata_pelajaran||j.mapel||'-'}</td>
+                        <td>${j.asatidz||'-'}</td><td>${j.ruang||'-'}</td><td>${badge}</td>`;
+        tbody.appendChild(tr);
+      });
+      document.getElementById('btnDownloadICS').addEventListener('click', () => SAMAN.downloadICS('jadwal-pekan-ini.ics', data.filter(SAMAN.isVisibleForRow)));
+    } catch(e){ console.warn(e); }
+  })();
+</script>
+  </div>
+</main>
+<footer class="py-4">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <h2 class="h5">Pesantren Tunanetra Sam'an</h2>
+        <p class="mb-1">Alamat: (isi alamat lengkap di sini)</p>
+        <p class="mb-1">Email: <a href="mailto:info@saman.example">info@saman.example</a></p>
+        <p class="mb-0">Telepon/WA: 08xx-xxxx-xxxx</p>
+      </div>
+      <div class="col-md-6">
+        <h2 class="h5">Tautan Penting</h2>
+        <ul>
+          <li><a data-form="buku_tamu" href="#" target="_blank" rel="noopener">Buku Tamu</a></li>
+          <li><a data-form="penelitian" href="#" target="_blank" rel="noopener">Izin Penelitian</a></li>
+          <li><a data-form="absensi" href="#" target="_blank" rel="noopener">Isi Absensi</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <p class="mb-0 small">© 2025 Sam'an — Mode: <code id="modeLabel">terang</code>. | <a href="README.html">Dokumentasi</a></p>
+  </div>
+</footer>
+<button id="backToTop" class="btn btn-secondary" aria-label="Kembali ke atas">↑</button>
+<div id="ariaLiveRegion" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script defer src="assets/js/config.js"></script>
+<script defer src="assets/js/main.js"></script>
+<script>
+  // Update mode label
+  (function() {{ const m = localStorage.getItem('saman-theme') || 'light'; document.getElementById('modeLabel').textContent = (m === 'dark' ? 'gelap' : 'terang'); }})();
+</script>
+</body>
+</html>

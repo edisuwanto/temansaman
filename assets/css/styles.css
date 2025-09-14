@@ -1,0 +1,164 @@
+
+/* =========================================================
+   Sam'an Theme — Responsive, Accessible, Blue Palette
+   - Light blue + dark blue brand palette
+   - Works with Bootstrap 5 (data-bs-theme="light"|"dark")
+   - Mobile-first responsive refinements
+   ========================================================= */
+
+/* ---------- Base & A11y ---------- */
+:root {
+  --saman-font-base: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --saman-radius: .75rem;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--saman-font-base); line-height: 1.7; }
+
+/* Keyboard navigation focus ring */
+:focus-visible { outline: 3px solid var(--bs-primary); outline-offset: 2px; }
+
+/* Skip link for screen reader & keyboard users */
+.skip-link { position: absolute; left: -9999px; top: -9999px; }
+.skip-link:focus {
+  z-index: 10000; left: .5rem; top: .5rem;
+  background: var(--bs-body-bg); color: var(--bs-body-color);
+  padding: .5rem 1rem; border: 2px solid var(--bs-body-color); border-radius: .5rem;
+}
+
+/* ---------- Brand Palette & Bootstrap Overrides ---------- */
+/* Light mode */
+:root[data-bs-theme="light"] {
+  /* Brand blues (light to dark) */
+  --brand-50:  #eef6ff;
+  --brand-100: #dbeaff;
+  --brand-200: #bfdbfe;
+  --brand-300: #93c5fd;
+  --brand-400: #60a5fa;
+  --brand-500: #3b82f6; /* biru muda */
+  --brand-600: #2563eb;
+  --brand-700: #1d4ed8; /* biru tua */
+  --brand-800: #1e40af;
+  --brand-900: #172554;
+
+  --accent-500: #22c55e;
+  --warning-500: #f59e0b;
+  --danger-500:  #ef4444;
+
+  /* Bootstrap brand overrides */
+  --bs-primary: var(--brand-600);
+  --bs-primary-rgb: 37, 99, 235;
+  --bs-link-color: var(--brand-700);
+  --bs-link-hover-color: var(--brand-800);
+  --bs-focus-ring-color: rgba(37, 99, 235, .3);
+
+  /* Base colors */
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #0f172a;        /* slate-900 */
+  --bs-border-color: #e5e7eb;      /* gray-200 */
+}
+
+/* Dark mode */
+:root[data-bs-theme="dark"] {
+  --brand-300: #7aa2ff;
+  --brand-400: #5c86ff;
+  --brand-500: #4670ff; /* biru muda (gelap) */
+  --brand-600: #3358e6;
+  --brand-700: #2445c2; /* biru tua */
+  --brand-800: #1b388f;
+  --brand-900: #12245e;
+
+  --bs-primary: var(--brand-500);
+  --bs-primary-rgb: 70, 112, 255;
+  --bs-link-color: var(--brand-300);
+  --bs-link-hover-color: var(--brand-200, #9fb6ff);
+  --bs-focus-ring-color: rgba(70, 112, 255, .35);
+
+  --bs-body-bg: #0b1220;
+  --bs-body-color: #e5e7eb;
+  --bs-border-color: #1f2a44;
+}
+
+/* ---------- Layout & Navigation ---------- */
+.navbar.bg-body-tertiary {
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.03) 0, rgba(0,0,0,0) 100%),
+    var(--bs-body-bg) !important;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+.navbar .navbar-brand { letter-spacing: .2px; }
+.navbar .nav-link.active,
+.navbar .nav-link[aria-current="page"] { color: var(--bs-primary) !important; font-weight: 600; }
+.navbar .dropdown-menu { border-radius: .75rem; }
+
+/* ---------- Hero ---------- */
+.hero {
+  background:
+    radial-gradient(800px 240px at 90% -20%, rgba(var(--bs-primary-rgb), .08), transparent 60%),
+    linear-gradient(135deg, var(--brand-50), rgba(var(--bs-primary-rgb), .06));
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--saman-radius);
+}
+[data-bs-theme="dark"] .hero {
+  background:
+    radial-gradient(800px 240px at 90% -20%, rgba(var(--bs-primary-rgb), .18), transparent 60%),
+    linear-gradient(135deg, rgba(var(--bs-primary-rgb), .10), rgba(27,56,143,.10));
+  border-color: var(--bs-border-color);
+}
+
+/* ---------- Cards ---------- */
+.card {
+  border-radius: var(--saman-radius);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+[data-bs-theme="dark"] .card:hover { box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+
+/* ---------- Buttons (soft variants) ---------- */
+.btn-soft-primary {
+  background-color: rgba(var(--bs-primary-rgb), .12);
+  border-color: rgba(var(--bs-primary-rgb), .2);
+  color: var(--bs-primary);
+}
+.btn-soft-primary:hover { background-color: rgba(var(--bs-primary-rgb), .18); color: var(--bs-primary); }
+
+/* ---------- Tables ---------- */
+.table caption { caption-side: top; font-weight: 600; text-align: left; }
+.table thead th { position: sticky; top: 0; background: var(--bs-body-bg); z-index: 1; }
+.table-hover > tbody > tr:hover > * { background-color: rgba(var(--bs-primary-rgb), .04); }
+
+/* ---------- Utilities ---------- */
+.shadow-brand { box-shadow: 0 10px 30px rgba(var(--bs-primary-rgb), .12) !important; }
+.rounded-xl { border-radius: 1rem !important; }
+
+/* Back-to-top button */
+#backToTop {
+  position: fixed; right: 1rem; bottom: 1rem; display: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,.1);
+}
+
+/* Gate (Public/Portal notice) */
+.gate-message {
+  border: 2px dashed var(--bs-border-color);
+  border-radius: var(--saman-radius);
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(var(--bs-primary-rgb), .04), rgba(var(--bs-primary-rgb), .02));
+}
+
+/* Footer */
+footer { border-top: 1px solid var(--bs-border-color); }
+
+/* ---------- Responsive Tweaks ---------- */
+@media (max-width: 575.98px) {
+  .display-5 { font-size: 2rem; }
+  .hero { padding: 1rem !important; }
+  .navbar .btn { padding: .35rem .6rem; }
+  .navbar .btn-group .btn { padding: .35rem .5rem; }
+}
+
+@media (min-width: 992px) {
+  .hero .lead { max-width: 54ch; }
+}

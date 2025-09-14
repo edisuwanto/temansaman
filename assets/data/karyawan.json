@@ -1,0 +1,42 @@
+[
+  {
+    "nip": "K-001",
+    "nama": "Ahmad Fauzi",
+    "jabatan": "Pengurus",
+    "unit": "Sekretariat",
+    "status": "Aktif",
+    "visibility": "public"
+  },
+  {
+    "nip": "K-002",
+    "nama": "Budi Santoso",
+    "jabatan": "Bendahara",
+    "unit": "Keuangan",
+    "status": "Aktif",
+    "visibility": "portal"
+  },
+  {
+    "nip": "K-003",
+    "nama": "Citra Wulandari",
+    "jabatan": "Sekretaris",
+    "unit": "Kesekretariatan",
+    "status": "Aktif",
+    "visibility": "public"
+  },
+  {
+    "nip": "K-004",
+    "nama": "Dedi Permana",
+    "jabatan": "Asatidz",
+    "unit": "Akademik",
+    "status": "Aktif",
+    "visibility": "public"
+  },
+  {
+    "nip": "K-005",
+    "nama": "Eka Putri",
+    "jabatan": "Resepsionis",
+    "unit": "Layanan",
+    "status": "Aktif",
+    "visibility": "public"
+  }
+]
